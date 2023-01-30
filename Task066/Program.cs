@@ -5,11 +5,11 @@ int n = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите M: ");
 int m = Convert.ToInt32(Console.ReadLine());
 
-int CountNaturalSum(int n, int m)
+int NaturalNumbersSum(int n, int m)
 {
     if (n == m)
         return m;
-    return m + CountNaturalSum(n, m - 1);
+    return m + NaturalNumbersSum(n, m - 1);
 }
 
-Console.WriteLine($"Сумма элементов от {n} до {m} = {CountNaturalSum(n, m)}");
+Console.WriteLine($"Сумма элементов от {n} до {m} = {NaturalNumbersSum(n, m)}");
